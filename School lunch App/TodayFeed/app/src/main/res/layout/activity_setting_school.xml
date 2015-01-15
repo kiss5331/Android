@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.dalkomsoft02.ganggongui.todayfeed.SettingSchoolActivity">
+
+
+    <LinearLayout
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_marginTop="3dp"
+            android:text="학교명을 입력해주세요."
+            android:textSize="18dp"
+            android:layout_weight="5"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dip" />
+
+        <LinearLayout
+            android:weightSum="10"
+            android:layout_weight="12"
+            android:layout_width="match_parent"
+            android:layout_height="0dip">
+
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/Setting_Seth_ET"
+                android:gravity="center"
+                android:hint="학교명"
+                android:layout_weight="8"
+                android:layout_width="0dip"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+        <ListView
+
+            android:id="@+id/Setting_School_LV"
+            android:layout_marginTop="20dp"
+            android:layout_weight="75"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:dividerHeight="10dp"
+            android:divider="#00000000"></ListView>
+
+
+        <Button
+            android:id="@+id/serch_Btn"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:text="검색"
+            android:layout_width="190dp"
+            android:layout_height="30dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

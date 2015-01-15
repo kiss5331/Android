@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dalkomsoft02.ganggongui.sound_balance_pross">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon_free"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity
+            android:name="com.dalkomsoft02.ganggongui.sound_balance_pross.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.dalkomsoft02.ganggongui.sound_balance_pross.SoundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.dalkomsoft02.ganggongui.sound_balance_pross.HeadsetReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="com.dalkomsft02.gangongui.usercustom.UserCustomActivity"
+            android:label="@string/title_activity_user_custom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dalkomsft02.gangongui.usercustom.SoundBalanceInfoActivity"
+            android:label="@string/title_activity_sound_balance_info"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

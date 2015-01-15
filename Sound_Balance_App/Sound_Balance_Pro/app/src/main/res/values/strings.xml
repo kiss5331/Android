@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sound Balance</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_startBtn">자동 음량 조절 시작</string>
+    <string name="main_userBtn">사용자화</string>
+    <string name="main_resetBtn">설정 초기화</string>
+    <string name="main_stopBtn">자동 음량 조절 중지</string>
+    <string name="title_activity_user_custom">UserCustomActivity</string>
+    <string name="title_activity_sound_balance_info">SoundBalanceInfoActivity</string>
+    <string name="dierogtitle">사용자 설정 초기화 </string>
+    <string name="dbinfo">현재 데시벨</string>
+    <string name="start_meg_false">설정 시 서비스가 자동 실행됩니다.</string>
+    <string name="start_meg_true">이미 서비스가 실행 중 입니다.</string>
+    <string name="start_meg_stop">서비스가 중지 되었습니다.</string>
+    <string name="start_meg_stop_false">실행 중인 서비스가 없습니다.</string>
+    <string name="start_meg_start">서비스가 시작 되었습니다.</string>
+    <string name="notif_title">자동 음량 조절 중</string>
+    <string name="notif_subtitle">이어폰 연결시 작동합니다.</string>
+    <string name="install">초기회되었습니다.</string>
+    <string name="info1">Sound Balance 는 이어폰을 사용하여 음악을 즐기는 여러분들에게 놀라운 자동 음량 조절 기능을 제공 합니다!</string>
+    <string name="info2">이제 더 이상 음량을 조절에 방해 받지 마세요! Sound Balance 는 주변의 소음을 측정하여 사용자의 귀와 음악감상을 보호 합니다!</string>
+    <string name="info3">음량 조절이 마음에 들지 않으시다면 (사용자화) 에서 변경하세요! Sound Balance Pro 버전에서는 광고의 제거와 더 많은 기능을 제공합니다!</string>
+    <string name="setBtntext">선택</string>
+    <string name="plusBtntext">추가</string>
+    <string name="radiodef">Basic User set</string>
+    <string name="radiodef2">Second User set</string>
+    <string name="ProText">프로 버전에서 이용할 수 있습니다!</string>
+    <string name="UserMode">User Mode</string>
+</resources>

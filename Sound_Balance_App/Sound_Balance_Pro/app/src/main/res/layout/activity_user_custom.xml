@@ -1,0 +1,757 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context="com.dalkomsft02.gangongui.usercustom.UserCustomActivity">
+
+
+    <LinearLayout
+
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@drawable/main_toolbar"
+
+            android:elevation="10dp" />
+
+
+        <TextView
+            android:text="@string/dbinfo"
+            android:gravity="bottom|center_horizontal"
+            android:layout_weight="7"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <TextView
+
+            android:id="@+id/TV_user_db"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:text="50db"
+            android:layout_weight="14"
+            android:textColor="@android:color/white"
+            android:textSize="57sp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            />
+
+
+        <LinearLayout
+            android:layout_weight="1.5"
+            android:background="@drawable/shehow_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+
+        <LinearLayout
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_weight="56"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <RelativeLayout
+                android:layout_weight="100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/sheow_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <LinearLayout
+                    android:weightSum="100"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:layout_weight="10"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="9">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip" />
+
+                        <TextView
+                            android:text="15"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_height="0dip" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="2dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+                            android:text="10"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+                            android:text="5"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+                        <TextView
+
+                            android:gravity="center"
+                            android:layout_weight="0.7"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+
+                        <TextView
+                            android:text="0"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_marginBottom="1dp" />
+
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_weight="80"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:rotation="270"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+
+                                android:layout_marginBottom="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <FrameLayout
+                                        android:paddingRight="40dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+                                        <ImageView
+                                            android:src="@drawable/seekbarbeckground"
+                                            android:layout_gravity="center"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:maxHeight="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                        <SeekBar
+                                            android:id="@+id/sickbar_1"
+                                            android:paddingRight="10dp"
+                                            android:paddingLeft="13dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:max="15"
+                                            android:progress="2"
+                                            android:maxHeight="7dp"
+                                            android:secondaryProgress="0"
+                                            android:progressDrawable="@drawable/seekbar_progress_bg"
+                                            android:thumb="@drawable/seekbartubio" />
+
+
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_marginBottom="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <FrameLayout
+                                        android:paddingRight="40dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+                                        <ImageView
+                                            android:src="@drawable/seekbarbeckground"
+                                            android:layout_gravity="center"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:maxHeight="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                        <SeekBar
+                                            android:id="@+id/sickbar_2"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:max="15"
+                                            android:progress="2"
+                                            android:maxHeight="7dp"
+                                            android:secondaryProgress="0"
+                                            android:progressDrawable="@drawable/seekbar_progress_bg"
+                                            android:thumb="@drawable/seekbartubio" />
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+
+                                android:layout_marginBottom="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <FrameLayout
+                                        android:paddingRight="40dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+                                        <ImageView
+                                            android:src="@drawable/seekbarbeckground"
+                                            android:layout_gravity="center"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:maxHeight="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                        <SeekBar
+                                            android:id="@+id/sickbar_3"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:max="15"
+                                            android:progress="2"
+                                            android:maxHeight="7dp"
+                                            android:secondaryProgress="0"
+                                            android:progressDrawable="@drawable/seekbar_progress_bg"
+                                            android:thumb="@drawable/seekbartubio" />
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_marginBottom="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <FrameLayout
+                                        android:paddingRight="40dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+                                        <ImageView
+                                            android:src="@drawable/seekbarbeckground"
+                                            android:layout_gravity="center"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:maxHeight="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                        <SeekBar
+                                            android:id="@+id/sickbar_4"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:max="15"
+                                            android:progress="2"
+                                            android:maxHeight="7dp"
+                                            android:secondaryProgress="0"
+                                            android:progressDrawable="@drawable/seekbar_progress_bg"
+                                            android:thumb="@drawable/seekbartubio" />
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_marginBottom="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <FrameLayout
+                                        android:paddingRight="40dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+                                        <ImageView
+                                            android:src="@drawable/seekbarbeckground"
+                                            android:layout_gravity="center"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:maxHeight="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                        <SeekBar
+                                            android:id="@+id/sickbar_5"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:max="15"
+                                            android:progress="2"
+                                            android:maxHeight="7dp"
+                                            android:secondaryProgress="0"
+                                            android:progressDrawable="@drawable/seekbar_progress_bg"
+                                            android:thumb="@drawable/seekbartubio" />
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_marginBottom="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <FrameLayout
+                                        android:paddingRight="40dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+                                        <ImageView
+                                            android:src="@drawable/seekbarbeckground"
+                                            android:layout_gravity="center"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:maxHeight="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                        <SeekBar
+                                            android:id="@+id/sickbar_6"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:max="15"
+                                            android:progress="2"
+                                            android:maxHeight="7dp"
+                                            android:secondaryProgress="0"
+                                            android:progressDrawable="@drawable/seekbar_progress_bg"
+                                            android:thumb="@drawable/seekbartubio" />
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:layout_marginBottom="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <FrameLayout
+                                        android:paddingRight="40dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+
+                                        <ImageView
+                                            android:src="@drawable/seekbarbeckground"
+                                            android:layout_gravity="center"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:maxHeight="3dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                        <SeekBar
+                                            android:id="@+id/sickbar_7"
+                                            android:paddingLeft="13dp"
+                                            android:paddingRight="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:max="15"
+                                            android:progress="2"
+                                            android:maxHeight="7dp"
+                                            android:secondaryProgress="0"
+                                            android:progressDrawable="@drawable/seekbar_progress_bg"
+                                            android:thumb="@drawable/seekbartubio" />
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="100"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dip">
+
+
+            <TextView
+                android:layout_weight="28"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_marginTop="13dp"
+                android:src="@drawable/lv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="7"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:src="@drawable/lv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="7"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_marginTop="24dp"
+                android:src="@drawable/lv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_weight="6"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_marginTop="19dp"
+                android:src="@drawable/lv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="8"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:src="@drawable/lv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="8"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:src="@drawable/lv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="9"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_marginTop="16dp"
+                android:src="@drawable/lv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="top"
+            android:weightSum="100"
+            android:layout_weight="8"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dip">
+
+
+            <TextView
+                android:layout_weight="29"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_marginTop="9dp"
+                android:text="20dB+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="8"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_marginTop="9dp"
+                android:text="30dB+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="5"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_marginTop="9dp"
+                android:text="40dB+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_weight="5"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_marginTop="9dp"
+                android:text="50dB+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="7"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_marginTop="9dp"
+                android:text="60dB+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="8"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_marginTop="9dp"
+                android:text="70dB+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="6"
+                android:layout_width="0dip"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_marginTop="9dp"
+                android:text="80dB+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

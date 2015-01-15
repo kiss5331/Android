@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="250px"
+            android:layout_height="250px" />
+
+        <TextView
+            android:id="@+id/text"
+            android:textSize="20dp"
+
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40px"
+            android:layout_marginLeft="660px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/delbtn"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/del"
+            android:layout_width="120px"
+            android:layout_height="120px" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

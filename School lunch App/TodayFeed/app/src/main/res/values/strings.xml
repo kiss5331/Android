@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TodayFeed</string>
+    <string name="hello_world">상일미디어 고등학교</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_setting_school">SettingSchoolActivity</string>
+
+</resources>

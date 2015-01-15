@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- home app에서 widget을 어떻게 운영해 주어야 하는지 운영 규칙 등록.. 
+바탕 화면에 주어진 사이즈 만큼 공간이 없으면 위젯 추가 안된다..
+update 주기는 30분 이하면 무시된다..-->
+<appwidget-provider 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="35dp"
+    android:minHeight="52dp"
+    android:updatePeriodMillis="1800000"
+    android:initialLayout="@layout/widget_layout" 
+    />
+    
+

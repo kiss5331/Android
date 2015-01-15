@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sound Balance</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_startBtn">启动自动音量控制</string>
+    <string name="main_userBtn">定制</string>
+    <string name="main_resetBtn">重置</string>
+    <string name="main_stopBtn">自动音量控制停止</string>
+    <string name="title_activity_user_custom">UserCustomActivity</string>
+    <string name="title_activity_sound_balance_info">SoundBalanceInfoActivity</string>
+    <string name="dierogtitle">用户复位 </string>
+    <string name="dbinfo">当前分贝</string>
+    <string name="start_meg_false">卷时该服务将自动启动设置。</string>
+    <string name="start_meg_true">该服务已在运行。</string>
+    <string name="start_meg_stop">服务停止。</string>
+    <string name="start_meg_stop_false">没有服务运行。</string>
+    <string name="start_meg_start">该服务启动。</string>
+    <string name="notif_title">在自动音量控制</string>
+    <string name="notif_subtitle">触摸设置。</string>
+    <string name="install">已被清除。</string>
+    <string name="info1">声音平衡提供自动音量控制到一个令人惊讶的你喜欢使用耳机的音乐！</string>
+    <string name="info2">现在不要在更多的量的调节干预！声音平衡测量背景噪音，以保护您的耳朵，听音乐！</string>
+    <string name="info3">音量控制，如果你不喜欢（自定义）来改变！声音平衡专业版提供了更多的功能和删除广告！</string>
+    <string name="setBtntext">选择</string>
+    <string name="plusBtntext">添加</string>
+    <string name="radiodef">Basic User set</string>
+    <string name="radiodef2">Second User set</string>
+    <string name="ProText">是在Pro版本！</string>
+    <string name="UserMode">User Mode</string>
+
+
+</resources>

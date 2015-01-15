@@ -1,0 +1,47 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ScreenWidget"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- manifest에 Activity가 정의 되어 있다고 app icon이 나오지는 않는다 
+        MAIN action, Launcher category intent-filter가 등록된 
+        activity가 없으면 icon은 안나온다.. -->
+        <activity android:name="com.example.ScreenWidget.Activity1"></activity>
+        
+        <service android:name="com.example.ScreenWidget.WidgetService">
+            <intent-filter>
+                <action android:name="com.multi.ACTION_SERVICE"/>
+            </intent-filter>
+        </service>
+        
+        <receiver android:name="com.example.ScreenWidget.MyWidget">
+            <!-- component의 intent-filter에 action, category, data가 
+            	선언되어 있으면 intent 발생시 모두 맟추어야 실행..
+            	그런데, action이 여러 개 선언되어 있다.. 따라서, 하나만 맞아도 실행된다..
+             -->
+            <intent-filter>
+                <!-- home app에서 widget을 운용하기 위해서 호출시 반응한다 
+                widget 추가, 제거 update -->
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <!-- home app에서 click event 발생시.. 받기 위해서.. -->
+                <action android:name="com.multi.ACTION_CLICK"/>
+                <!-- service가 데이터를 넘기기 위해서 .. -->
+                <action android:name="com.multi.ACTION_CLOCK"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider"/>
+        </receiver>
+        
+    </application>
+
+</manifest>

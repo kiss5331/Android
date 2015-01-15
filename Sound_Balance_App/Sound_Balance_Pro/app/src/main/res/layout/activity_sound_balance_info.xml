@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dalkomsft02.gangongui.usercustom.SoundBalanceInfoActivity">
+
+
+    <LinearLayout
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@drawable/main_toolbar"
+            android:elevation="10dp" />
+
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/grapicig"
+            android:layout_weight="35"
+            android:layout_width="match_parent"
+            android:layout_height="0dip" />
+
+        <RelativeLayout
+            android:paddingTop="20dp"
+            android:layout_weight="60"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <ImageView
+
+                android:id="@+id/headset"
+                android:layout_margin="10dp"
+                android:src="@drawable/headset"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:textColor="@android:color/white"
+                android:lineSpacingExtra="2dip"
+                android:text="@string/info1"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@id/headset"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_below="@id/headset"
+                android:id="@+id/speker"
+                android:layout_margin="10dp"
+                android:src="@drawable/speakers"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:textColor="@android:color/white"
+                android:lineSpacingExtra="2dip"
+                android:text="@string/info2"
+                android:layout_below="@id/text1"
+
+                android:layout_toRightOf="@id/speker"
+                android:layout_marginTop="22dp"
+                android:layout_alignBaseline="@id/speker"
+
+                android:layout_width="265dp"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:layout_below="@id/speker"
+                android:id="@+id/eqicon"
+                android:layout_margin="10dp"
+                android:src="@drawable/eqicon"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:textColor="@android:color/white"
+                android:lineSpacingExtra="2dip"
+                android:text="@string/info3"
+                android:layout_below="@id/text2"
+
+                android:layout_toRightOf="@id/speker"
+                android:layout_marginTop="22dp"
+                android:layout_alignBaseline="@id/speker"
+
+                android:layout_width="265dp"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
