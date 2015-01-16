@@ -22,6 +22,8 @@ public class MainActivity extends ActionBarActivity {
 
     private final String NAME_CODE = MainActivity.class.getName();
 
+    //정제된 JSON 데이터를 저장할 List
+
     private List<String> datalist = new ArrayList<String>();
 
 
@@ -97,7 +99,7 @@ public class MainActivity extends ActionBarActivity {
 
         final private String MSRDT_DE = "/20150115";
 
-
+        // 파싱 후 정제된 JSON 데이터를 String 형으로 저장
         private String JSONdata;
 
 
@@ -134,8 +136,12 @@ public class MainActivity extends ActionBarActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
+            // 리스트내에 JSON 데이터가 중보되어 추가되는 것을
+            // 막기위해 초기화
             datalist.clear();
 
+            // ArrayList 형식으로 정제된 JSON 데이터를 돌려
+            // 받아 List 에 저장
             datalist.addAll(new JSONPaser(JSONdata).getJsonData());
 
 
