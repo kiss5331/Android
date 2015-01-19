@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ganggongui.dalkomsoft02.com.fakestudy.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar" />
+
+
+    <Button
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/Btnstart"
+        android:text="시작"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/Btnshowcaseview"
+        android:text="쇼케이스뷰"
+        android:layout_below="@id/Btnstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_below="@id/Btnshowcaseview"
+        android:id="@+id/BtnEnd"
+        android:text="종료"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

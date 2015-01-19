@@ -1,8 +1,8 @@
 package com.dalkomsoft02.ganggongui.seouldustapp;
 
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -26,11 +26,10 @@ public class MainActivity extends ActionBarActivity {
 
     private List<String> datalist = new ArrayList<String>();
 
-
-
-
-
-
+    private final String[] AreaDumy = {"강남구", "강동구", "강북구", "강서구", "관악구", "구로구",
+            "금천구", "노원구", "도봉구", "동대문구", "동작구", "용산구", "은평구", "종로구", "중구", "중량구",
+            "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양현구", "영등포구"
+    };
 
 
     @Override
@@ -38,12 +37,14 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         setToolBar();
 
 
         // 관측소 명을 인자 값으로 전달
 
-        new DustDataTesk().execute("송파구");
+        new DustDataTesk().execute(AreaDumy[0]);
+
 
     }
 
@@ -106,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
         @Override
         protected Void doInBackground(String... params) {
 
-            String MSRSTE_NM = "/송파구";
+            String MSRSTE_NM = "/" + params[0];
 
             try {
 
@@ -146,6 +147,9 @@ public class MainActivity extends ActionBarActivity {
 
 
         }
+
+
     }
+
 
 }
