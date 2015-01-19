@@ -1,4 +1,4 @@
-package ganggongui.dalkomsoft02.com.fakestudy;
+package ganggongui.dalkomsoft02.com.myapplication;
 
 import android.app.Service;
 import android.content.Context;

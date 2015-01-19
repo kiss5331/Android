@@ -1,4 +1,4 @@
-package ganggongui.dalkomsoft02.com.fakestudy;
+package ganggongui.dalkomsoft02.com.myapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
