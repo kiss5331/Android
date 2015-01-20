@@ -31,11 +31,14 @@ public class MainActivity extends ActionBarActivity {
 
     private List<String> datalist = new ArrayList<String>();
 
+    //서울 지역 더미데이터
+
     private final String[] AreaDumy = {"강남구", "강동구", "강북구", "강서구", "관악구", "구로구",
             "금천구", "노원구", "도봉구", "동대문구", "동작구", "용산구", "은평구", "종로구", "중구", "중량구",
             "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양현구", "영등포구"
     };
 
+    //액티비티 종료 시간
     private final int RemiteTime = 1000;
 
 
@@ -180,6 +183,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    //네트워크 체킹
     private boolean checkNetwordState() {
         ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo state_3g = connManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
