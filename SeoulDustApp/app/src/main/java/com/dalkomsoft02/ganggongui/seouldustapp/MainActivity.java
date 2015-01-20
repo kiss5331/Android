@@ -1,12 +1,17 @@
 package com.dalkomsoft02.ganggongui.seouldustapp;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
@@ -31,6 +36,8 @@ public class MainActivity extends ActionBarActivity {
             "마포구", "서대문구", "서초구", "성동구", "성북구", "송파구", "양현구", "영등포구"
     };
 
+    private final int RemiteTime = 1000;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +47,31 @@ public class MainActivity extends ActionBarActivity {
 
         setToolBar();
 
+        // 네트워크 연결 여부 검사
+        if (checkNetwordState()) {
 
-        // 관측소 명을 인자 값으로 전달
+            // 관측소 명을 인자 값으로 전달
+            new DustDataTesk().execute(AreaDumy[0]);
 
-        new DustDataTesk().execute(AreaDumy[0]);
+
+        } else {
+
+
+            Toast.makeText(getApplicationContext(), getString(R.string.intent_message), Toast.LENGTH_LONG).show();
+
+            Handler handler = new Handler();
+
+            //네트워크 미연결시 1 초후 종료
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    finish();
+
+                }
+            }, RemiteTime);
+
+        }
 
 
     }
@@ -149,6 +177,15 @@ public class MainActivity extends ActionBarActivity {
         }
 
 
+    }
+
+
+    private boolean checkNetwordState() {
+        ConnectivityManager connManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo state_3g = connManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        NetworkInfo state_wifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+        return state_3g.isConnected() || state_wifi.isConnected();
     }
 
 
