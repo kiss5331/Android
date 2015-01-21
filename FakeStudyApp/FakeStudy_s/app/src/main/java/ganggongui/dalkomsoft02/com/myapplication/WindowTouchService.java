@@ -28,6 +28,7 @@ public class WindowTouchService extends Service {
         super.onCreate();
 
         LayoutInflater mInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
         mView = mInflater.inflate(R.layout.windowbutton, null);
 
         mParams = new WindowManager.LayoutParams(
@@ -42,6 +43,8 @@ public class WindowTouchService extends Service {
         mManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         mManager.addView(mView, mParams);
 
+        // 생성된 뷰 클릭시
+        // 액티비티를 호출합니다.
         mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,10 +65,4 @@ public class WindowTouchService extends Service {
 
     }
 
-    @Override
-    public boolean stopService(Intent name) {
-        return super.stopService(name);
-
-
-    }
 }
