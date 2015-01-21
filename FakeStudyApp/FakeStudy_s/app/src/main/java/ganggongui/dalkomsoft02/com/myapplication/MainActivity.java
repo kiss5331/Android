@@ -4,17 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
-    private Button StartBtn;
+    private final String EARR_CODE = MainActivity.class.getName();
 
-    private Button CaseViewBtn;
+    private Button StartBtn;
 
     private Button EndBtn;
 
@@ -40,23 +42,30 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.Btnstart:
 
+                Toast.makeText(getApplicationContext(), getString(R.string.start_text), Toast.LENGTH_SHORT).show();
+
                 startService(
                         new Intent(this, WindowTouchService.class)
                 );
 
                 break;
 
-            case R.id.Btnshowcaseview:
-
-                break;
 
             case R.id.BtnEnd:
 
-                stopService(
-                        new Intent(this, WindowTouchService.class)
-                );
+                try {
 
-                WindowTouchService.mManager.removeView(WindowTouchService.mView);
+                    Toast.makeText(getApplicationContext(), getString(R.string.exit_text), Toast.LENGTH_SHORT).show();
+                    stopService(
+                            new Intent(this, WindowTouchService.class)
+                    );
+
+                    WindowTouchService.mManager.removeView(WindowTouchService.mView);
+
+
+                } catch (Exception e) {
+                    Log.e(EARR_CODE, e.getMessage());
+                }
 
 
                 break;
@@ -95,17 +104,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        toolbar.setTitle(getString(R.string.app_name));
-
-        CaseViewBtn = (Button) findViewById(R.id.Btnshowcaseview);
 
         StartBtn = (Button) findViewById(R.id.Btnstart);
 
         EndBtn = (Button) findViewById(R.id.BtnEnd);
 
         StartBtn.setOnClickListener(this);
-
-        CaseViewBtn.setOnClickListener(this);
 
         EndBtn.setOnClickListener(this);
 

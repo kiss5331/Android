@@ -5,31 +5,121 @@
     tools:context="ganggongui.dalkomsoft02.com.fakestudy.MainActivity">
 
 
+    <ImageView
+        android:src="@drawable/main_image"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:weightSum="10"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:weightSum="10"
+                    android:layout_weight="8"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip">
+
+                    <View
+                        android:layout_weight="5.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip" />
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip">
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
+                            android:src="@drawable/next_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip">
+
+                    <LinearLayout
+                        android:weightSum="10"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:layout_weight="4"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent" />
+
+
+                        <Button
+                            android:gravity="center"
+                            android:id="@+id/BtnEnd"
+                            android:layout_marginTop="40dp"
+                            android:textColor="#67000000"
+                            android:text="@string/btn1_text"
+                            android:background="@drawable/btn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_weight="2"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent" />
+
+
+                        <Button
+                            android:id="@+id/Btnstart"
+                            android:layout_marginTop="40dp"
+                            android:text="@string/btn2_text"
+                            android:background="@drawable/btn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbar" />
 
-
-    <Button
-        android:layout_marginTop="?attr/actionBarSize"
-        android:id="@+id/Btnstart"
-        android:text="시작"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/Btnshowcaseview"
-        android:text="쇼케이스뷰"
-        android:layout_below="@id/Btnstart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:layout_below="@id/Btnshowcaseview"
-        android:id="@+id/BtnEnd"
-        android:text="종료"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
 </RelativeLayout>
