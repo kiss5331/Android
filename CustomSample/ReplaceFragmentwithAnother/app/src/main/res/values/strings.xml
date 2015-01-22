@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ReplaceFragmentwithAnother</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="replace">프래그먼트 교체</string>
+    <string name="fragment_1">첫번쨰 프래그먼트</string>
+    <string name="fragment_2">두번쨰 프래그먼트</string>
+
+</resources>
