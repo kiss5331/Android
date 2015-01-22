@@ -17,7 +17,7 @@ import java.io.FileOutputStream;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
 
-    private String filename = "장공의님입니다.txt";
+    private String filename = "myFile";
 
     private String text = "wkdasdnasjkndkjanfajsbfksbfkasbfsbfhsdbfkhsdbfhksbdfjsdhbfs";
 
