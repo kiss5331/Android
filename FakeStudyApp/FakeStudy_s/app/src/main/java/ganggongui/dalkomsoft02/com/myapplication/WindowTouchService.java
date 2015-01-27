@@ -52,6 +52,7 @@ public class WindowTouchService extends Service {
                         (new Intent(getApplicationContext(), FakeStudyActivity.class)
                                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         );
+
             }
         });
 

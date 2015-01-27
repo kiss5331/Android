@@ -16,6 +16,8 @@ public class MainActivity extends ActionBarActivity implements fragment_one.onTe
     public void onTextChange(String text) {
         fragment_twe fragment_twe = (fragment_twe) getSupportFragmentManager().findFragmentById(R.id.fragtwe);
 
+
+
         fragment_twe.setText(text);
 
     }

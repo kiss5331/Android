@@ -20,14 +20,14 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 첫번째 프래그먼트를 컨테이너가 얻도록 해줍니다.
-        // 반드시 commit() 을 해줘야 적용 됩니다.
+        // 첫번째 프래그먼트를 컨테이너가 얻도록 해준다
+        // 반드시 commit() 을 해줘야 적용
         getSupportFragmentManager().
                 beginTransaction().
-                // 프래그먼트 스텍에 프래그먼트와 이름을 지정해줍니다.
-                        // 스텍 형식으로 저장됨으로 첫번째 프래그먼트가 화면에 표시 됩니다.
+                // 프래그먼트 스텍에 프래그먼트와 이름을 지정
+                        // 스텍 형식으로 저장됨으로 첫번째 프래그먼트가 화면에 표시 .
 
-                        add(R.id.container, new TweFragment(), FRAG_ID_2).
+                add(R.id.container, new TweFragment(), FRAG_ID_2).
                 add(R.id.container, new OneFragment(), FRAG_ID_1).
                 commit();
 

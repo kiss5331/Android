@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@android:color/holo_blue_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dip" />
+
+    <TextView
+        android:padding="50dp"
+        android:gravity="center"
+        android:text="@string/main_title_TV"
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dip" />
+
+    <RelativeLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dip">
+
+        <Button
+            android:id="@+id/btn_move_main"
+            android:layout_centerInParent="true"
+            android:text="@string/main_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
