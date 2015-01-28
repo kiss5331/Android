@@ -1,5 +1,6 @@
 package ganggongui.dalkomsoft02.com.colorpad;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,7 +12,7 @@ import whdghks913.tistory.floatingactionbutton.FloatingActionButton;
 
 /**
  * Created by ganggongui on 15. 1. 27..
- *
+ * <p/>
  * 색상 보기 프레그 먼트
  */
 public class Section_Fragment2 extends Fragment {
@@ -38,6 +39,18 @@ public class Section_Fragment2 extends Fragment {
         mFloatingButton.setImageResource(R.drawable.plus);
         // 애니메이션 속도
         mFloatingButton.setDuration(500);
+        // 버튼 클릭시
+        mFloatingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 설정화면 이동
+                startActivity(new Intent(getActivity(), Setting_Activity.class));
+                // 애니메이션
+               // getActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
+            }
+        });
+
 
     }
 }

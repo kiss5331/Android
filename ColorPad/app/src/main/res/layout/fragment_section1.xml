@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:theme="@style/AppTheme"
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/DeepBlue_500">
 
+    <TextView
+        android:padding="10dp"
+        android:elevation="10dp"
+        android:textSize="20dp"
+        android:text="어플을 지정해주세요."
+        android:textColor="@android:color/white"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
     <LinearLayout
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ListView
-            android:id="@+id/list"
+<!--
+        <com.john.waveview.WaveView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
+            android:layout_height="match_parent"
+            android:background="@color/DeepBlue_500"
+            wave:above_wave_color="@android:color/white"
+            wave:blow_wave_color="@android:color/white"
+            wave:progress="36"
+            wave:wave_height="middle"
+            wave:wave_hz="normal"
+            wave:wave_length="middle"
+            ></com.john.waveview.WaveView>-->
 
 
     </LinearLayout>
@@ -27,13 +46,17 @@
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <whdghks913.tistory.floatingactionbutton.FloatingActionButton
             android:id="@+id/mFloatingActionButton"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="16dp"
             fab:fab_colorNormal="@android:color/white"
-            fab:fab_colorPressed="@android:color/darker_gray" />
+            fab:fab_colorPressed="@android:color/darker_gray"
+            fab:fab_shadow="true"
+
+            />
 
     </RelativeLayout>
 

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Cyan_200"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="7"
+
+                android:id="@+id/media_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                card_view:cardElevation="5dp"
+                android:layout_marginBottom="0dp"
+                >
+
+
+                <ViewFlipper
+                    android:background="@color/Cyan_200"
+                    android:clipToPadding="true"
+                    android:id="@+id/view_flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <fragment
+                        android:name="colorset.View_Fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_pview" />
+
+                    <fragment
+                        android:name="colorset.AppList_Fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_plist" />
+
+
+                </ViewFlipper>
+
+            </android.support.v7.widget.CardView>
+
+
+            <fragment
+                android:name="colorset.Picker_Fragment"
+                android:id="@+id/color_picker"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                tools:layout="@layout/fragment_picker" />
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:layout_marginTop="@dimen/statusMargin"
+            android:title="wkdrhddml"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

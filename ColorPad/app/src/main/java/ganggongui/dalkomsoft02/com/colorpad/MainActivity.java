@@ -16,10 +16,11 @@ public class MainActivity extends GoogleNavigationDrawer implements GAccountList
     @Override
     public void init(Bundle bundle) {
 
+
         //슬라이딩 메뉴 최상단 설정
         GAccount account = new GAccount(getString(R.string.menu_title),
-                getString(R.string.menu_app),this.getResources().
-                getDrawable(R.drawable.menu_icon),this.getResources().
+                getString(R.string.menu_app), this.getResources().
+                getDrawable(R.drawable.menu_icon), this.getResources().
                 getDrawable(R.drawable.menu));
         this.addAccount(account);
 
@@ -31,7 +32,7 @@ public class MainActivity extends GoogleNavigationDrawer implements GAccountList
 
 
         this.addSection(this.newSection(getString(R.string.main_colorview), this.getResources().getDrawable(R.drawable.menu_pattelt), new Section_Fragment2())
-                .setSectionColor(Color.parseColor("#EC407A"))); // material red 500
+                .setSectionColor(Color.parseColor("#00BCD4"))); // material red 500
 
         this.addDivisor();
 
@@ -48,7 +49,6 @@ public class MainActivity extends GoogleNavigationDrawer implements GAccountList
     public void onAccountOpening(GAccount gAccount) {
 
     }
-
 
 
     @Override

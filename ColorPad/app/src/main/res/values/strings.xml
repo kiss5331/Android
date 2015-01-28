@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ColorPad</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_title">색상 실행기 Pro</string>
+    <string name="menu_app">현재 설치된 어플 수 : </string>
+    <string name="main_sestion">메인 화면</string>
+    <string name="main_colorview">색상 보기</string>
+    <string name="title_activity_setting_">Setting_Activity</string>
+    <string name="dialog_text">로딩 중</string>
+    <string name="Toolbar_Title">알록 달록</string>
+    <string name="Toolbar_subTitle">원하는 색상을 선택해주세요!</string>
+    <string name="Toolbar_Title2">두근 두근</string>
+    <string name="Toolbar_subTitle2">어떤 앱이 선택될까요!</string>
+    <string name="colorcheckText">완료 그리고 체크</string>
+
+</resources>

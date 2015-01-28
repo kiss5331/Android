@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="AppTheme1" parent="GoogleNavigationDrawerTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/DeepBlue_500</item>
+        <item name="colorAccent">@color/DeepBlue_500</item>
+    </style>
+    <!-- Light version theme. -->
+    <style name="AppTheme2" parent="GoogleNavigationDrawerTheme.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/DeepBlue_500</item>
+        <item name="colorAccent">@color/DeepBlue_500</item>
+    </style>
+    <!-- Light version with Black actionbar -->
+    <style name="AppTheme3" parent="GoogleNavigationDrawerTheme.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/DeepBlue_500</item>
+    <item name="colorAccent">@color/DeepBlue_500</item>
+</style>
+
+    <style name="AppTheme4" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/DeepBlue_500</item>
+        <item name="colorAccent">@color/DeepBlue_500</item>
+    </style>
+
+</resources>
