@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:id="@+id/pick_fragment"
     android:background="@color/Cyan_200"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -73,7 +74,8 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             app:border="true"
-                            app:border_color="@color/DeepBlue"
+                            app:border_color="@color/DeepGrean"
+
                             app:border_width="4dp"
                             app:shadow="true" />
 
@@ -102,7 +104,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             app:border="true"
-                            app:border_color="@color/DeepGrean"
+                            app:border_color="@color/DeepBlue"
                             app:border_width="4dp"
                             app:shadow="true" />
 
@@ -224,7 +226,7 @@
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             app:border="true"
-                            app:border_color="#95ffffff"
+                            app:border_color="@color/DeepYellow"
                             app:border_width="4dp"
                             app:shadow="true" />
 

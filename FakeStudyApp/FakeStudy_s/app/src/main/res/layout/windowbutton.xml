@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Button xmlns:android="http://schemas.android.com/apk/res/android"
-
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#01ffffff"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="버튼">
+    android:src="@drawable/top_view"
+    android:layout_height="wrap_content">
 
 
-</Button>
+</ImageButton>

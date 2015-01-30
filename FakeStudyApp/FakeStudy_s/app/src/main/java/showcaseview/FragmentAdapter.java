@@ -26,6 +26,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         this.fragments = new ArrayList<Fragment>();
         fragments.add(new Main_Fragment_one());
         fragments.add(new Fragment_twe());
+        fragments.add(new Fragment_fore());
         fragments.add(new Fragment_thred());
 
 

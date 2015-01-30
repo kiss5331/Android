@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 import ganggongui.dalkomsoft02.com.myapplication.R;
 
@@ -21,7 +21,7 @@ public class Fragment_thred extends Fragment {
 
     // 첫번째 프래그 먼트로 돌아가는
     // 버튼 입니다.
-    private Button backbtn;
+    private ImageButton backbtn;
 
     // 엑티비와의 통신을 위한
     // 인터페이스 변수를 선언 합니다.
@@ -58,7 +58,7 @@ public class Fragment_thred extends Fragment {
     public void onStart() {
         super.onStart();
 
-        backbtn = (Button) view.findViewById(R.id.btn1);
+        backbtn = (ImageButton) view.findViewById(R.id.btn1);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override

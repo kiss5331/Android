@@ -39,12 +39,14 @@
                     android:layout_height="match_parent">
 
                     <fragment
+                        android:tag="tegs"
                         android:name="colorset.View_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         tools:layout="@layout/fragment_pview" />
 
                     <fragment
+                        android:id="@+id/fragment_pviewe"
                         android:name="colorset.AppList_Fragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

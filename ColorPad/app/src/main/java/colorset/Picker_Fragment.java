@@ -1,5 +1,6 @@
 package colorset;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -29,7 +30,7 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
 
     // 유저의 색상 선택 개수를
     // 조절하기위한 카운터
-    public int USER_PICK_COUNTER = 0;
+    public static int USER_PICK_COUNTER = 0;
 
     // 사이클 이미지뷰의 아이디 배열
     private final int COLOR_ID[] = {R.id.pick_red, R.id.pick_blue, R.id.pick_Green, R.id.pick_Brown, R.id.pick_Gray, R.id.pick_Pink, R.id.pick_Purple, R.id.pick_White};
@@ -37,6 +38,7 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
 
     // 클릭 시 이미지 변경을 위한 전역 변수
     private CircularImageView circularImageView;
+
 
     private CircularImageView[] ColorBtn = new CircularImageView[8];
 
@@ -63,6 +65,10 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
     }
 
 
+    /**
+     * 컬러 버튼의 View id 지정
+     */
+
     private void setCorlorBtnID() {
 
         int i = 0;
@@ -84,8 +90,8 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
      *
      * @param v The view that was clicked.
      *          <p/>
-     *
-     * onClick 된 가진 뷰의 배열 값을 전달한다.
+     *          <p/>
+     *          onClick 된 가진 뷰의 배열 값을 전달한다.
      */
     @Override
     public void onClick(View v) {
@@ -96,7 +102,6 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
 
                 int NUM_ZERO = 0;
 
-                onForwardColorListener.getPickColor(NUM_ZERO);
 
                 onBtnPressChanger(ColorBtn[NUM_ZERO], NUM_ZERO);
 
@@ -105,7 +110,6 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
 
                 int NUM_ONE = 1;
 
-                onForwardColorListener.getPickColor(NUM_ONE);
 
                 onBtnPressChanger(ColorBtn[NUM_ONE], NUM_ONE);
 
@@ -114,7 +118,6 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
 
                 int NUM_TWE = 2;
 
-                onForwardColorListener.getPickColor(NUM_TWE);
 
                 onBtnPressChanger(ColorBtn[NUM_TWE], NUM_TWE);
 
@@ -123,7 +126,6 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
 
                 int NUM_THREE = 3;
 
-                onForwardColorListener.getPickColor(NUM_THREE);
 
                 onBtnPressChanger(ColorBtn[NUM_THREE], NUM_THREE);
 
@@ -131,14 +133,12 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
             case R.id.pick_Gray:
                 int NUM_FO = 4;
 
-                onForwardColorListener.getPickColor(NUM_FO);
 
                 onBtnPressChanger(ColorBtn[NUM_FO], NUM_FO);
                 break;
             case R.id.pick_Pink:
                 int NUM_FIVE = 5;
 
-                onForwardColorListener.getPickColor(NUM_FIVE);
 
                 onBtnPressChanger(ColorBtn[NUM_FIVE], NUM_FIVE);
                 break;
@@ -146,7 +146,6 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
 
                 int NUM_SIX = 6;
 
-                onForwardColorListener.getPickColor(NUM_SIX);
 
                 onBtnPressChanger(ColorBtn[NUM_SIX], NUM_SIX);
 
@@ -155,7 +154,6 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
 
                 int NUM_SE = 7;
 
-                onForwardColorListener.getPickColor(NUM_SE);
 
                 onBtnPressChanger(ColorBtn[NUM_SE], NUM_SE);
 
@@ -183,12 +181,32 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
         public void getPickColor(int color);
     }
 
-    // 색상 클릭시 이미지 0.2 초간 변경
 
-
+    /**
+     * @param circularImageView 클릭 시 색상이 변경 될 View
+     * @param counter           원 색상 복원을 위한 배열 인덱스
+     *                          <p/>
+     *                          사이클 뷰 클릭시 0.1초간 이미지 색상 변경 후 복원
+     *                          *
+     */
     private void onBtnPressChanger(final CircularImageView circularImageView, final int counter) {
 
         final int RIMIT_TIME = 100;
+
+        // Setting_Activity 로 색상코드 인덱스 전달
+        // OnForwardColorListener 의 내부 메소드 이다.
+        onForwardColorListener.getPickColor(counter);
+
+        // 유져가 선택한 색상횟수 카운터
+
+
+        if (USER_PICK_COUNTER != 2) {
+
+            USER_PICK_COUNTER++;
+
+            Log.i(ERROR_CODE, "유저 색상 카운터:\t" + USER_PICK_COUNTER);
+
+        }
 
         circularImageView.setBorderColor(getResources().getColor(R.color.PressColor));
 
@@ -200,7 +218,7 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
             @Override
             public void run() {
 
-                circularImageView.setBorderColor(getResources().getColor(Setting_Activity.COLOR_CODES[counter]));
+                circularImageView.setBorderColor(Color.parseColor(Setting_Activity.COLOR_CODES[counter]));
 
             }
         }, RIMIT_TIME);

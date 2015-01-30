@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="DeepBlue_500">#2196F3</color>
-    <color name="DeepBlue_400">#42A5F5</color>
     <color name="DeepPink">#EC407A</color>
     <color name="DeepPink_A200">#FF4081</color>
     <color name="DeepPink_A100">#FF80AB</color>
@@ -14,4 +13,5 @@
     <color name="DeepGray">#9E9E9E</color>
     <color name="DeepWhite">#FFFFFF</color>
     <color name="PressColor">#B0BEC5</color>
+    <color name="DeepYellow">#FFEB3B</color>
 </resources>

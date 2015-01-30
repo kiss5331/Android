@@ -23,14 +23,25 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
 
 
     // 색상 코드
-    public static final int COLOR_CODES[] = {R.color.DeepRed, R.color.DeepBlue, R.color.DeepGrean, R.color.DeepBrown, R.color.DeepGray, R.color.DeepPink, R.color.DeepPurple, R.color.DeepWhite};
+    public static String COLOR_CODES[];
 
     private final String ERROR_CODE = Setting_Activity.this.getClass().getName();
+
+
+    // 처음 받는 색상 코드 값
+    private int DEF_COLOR_CODE = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_);
+
+
+        COLOR_CODES = getResources().getStringArray(R.array.DeepColor);
+
+
+        Log.e("불러온 배열", COLOR_CODES[0]);
 
         // 로딩 다이얼 로그 생성
         showDiarog();
@@ -38,7 +49,7 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
 
     }
 
-    //프래그먼트 전환
+    // 체크 버튼 클릭시 프래그먼트 전환
 
     public void ViewChange() {
 
@@ -84,9 +95,23 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
     // View_Fragment 로 전달하기위한 인터페이스
     // 내부 메소드 구현
 
+
+    /**
+     * @param color 사용자가 선택한 색상의 인덱스 값을 인자값으로 받는다.
+     */
     @Override
     public void getPickColor(int color) {
 
-        Log.i(ERROR_CODE, color + "");
+        View_Fragment.setWaveColor(color);
+
+        // Log.i(ERROR_CODE, get);
+
+        View_Fragment viewFragment = (View_Fragment)getSupportFragmentManager().findFragmentByTag("tegs");
+
+        viewFragment.setToase();
+
+
     }
+
+
 }

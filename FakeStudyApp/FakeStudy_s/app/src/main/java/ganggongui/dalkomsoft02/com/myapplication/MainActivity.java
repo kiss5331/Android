@@ -1,12 +1,20 @@
 package ganggongui.dalkomsoft02.com.myapplication;
 
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import java.util.List;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import showcaseview.FragmentAdapter;
 import showcaseview.Fragment_thred;
 
@@ -19,6 +27,8 @@ public class MainActivity extends ActionBarActivity implements Fragment_thred.on
     private FragmentAdapter fragmentAdapter;
 
     private TextView TV_info;
+
+    private ImageView facebookBtn;
 
 
     @Override
@@ -44,10 +54,41 @@ public class MainActivity extends ActionBarActivity implements Fragment_thred.on
         TV_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Ok", Toast.LENGTH_SHORT).show();
+                SweetLog();
             }
         });
 
+        facebookBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=ganggongui.dalkomsoft02.com.myapplication");
+                PackageManager pm = v.getContext().getPackageManager();
+                List<ResolveInfo> activityList = pm.queryIntentActivities(shareIntent, 0);
+                for (final ResolveInfo app : activityList) {
+                    if ((app.activityInfo.name).contains("facebook")) {
+                        final ActivityInfo activity = app.activityInfo;
+                        final ComponentName name = new ComponentName(activity.applicationInfo.packageName, activity.name);
+                        shareIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+                        shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+                        shareIntent.setComponent(name);
+                        v.getContext().startActivity(shareIntent);
+                        break;
+                    }
+                }
+            }
+        });
+
+
+    }
+
+    private void SweetLog() {
+
+        new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                .setTitleText(getString(R.string.Titleinfo))
+                .setContentText(getString(R.string.Titltsub))
+                .show();
 
     }
 
@@ -59,6 +100,8 @@ public class MainActivity extends ActionBarActivity implements Fragment_thred.on
         TV_info = (TextView) findViewById(R.id.infoBtn);
 
         viewPager = (ViewPager) findViewById(R.id.pager);
+
+        facebookBtn = (ImageView) findViewById(R.id.facebook);
 
     }
 

@@ -45,16 +45,20 @@ public class WindowTouchService extends Service {
 
         // 생성된 뷰 클릭시
         // 액티비티를 호출합니다.
+
         mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity
                         (new Intent(getApplicationContext(), FakeStudyActivity.class)
-                                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                         );
+
+                mView.setVisibility(View.GONE);
 
             }
         });
+
 
     }
 

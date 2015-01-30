@@ -76,11 +76,22 @@ public class Main_Fragment_one extends Fragment implements View.OnClickListener 
 
                 // 서비스를 시작합니다.
 
+                try {
+                    WindowTouchService.mManager.removeView(WindowTouchService.mView);
+                    getActivity().stopService(
+                            new Intent(getActivity(), WindowTouchService.class)
+                    );
+                } catch (Exception e) {
+                    Log.e("teg", "aaaaaaáa");
+                }
+
                 Toast.makeText(getActivity(), getString(R.string.start_text), Toast.LENGTH_SHORT).show();
 
                 getActivity().startService(
                         new Intent(getActivity(), WindowTouchService.class)
                 );
+
+                getActivity().finish();
 
                 break;
 
@@ -91,13 +102,11 @@ public class Main_Fragment_one extends Fragment implements View.OnClickListener 
                 // 중지시 에러가 발생하므로 예외처리를 해줍니다
 
                 try {
-
+                    WindowTouchService.mManager.removeView(WindowTouchService.mView);
                     Toast.makeText(getActivity(), getString(R.string.exit_text), Toast.LENGTH_SHORT).show();
                     getActivity().stopService(
                             new Intent(getActivity(), WindowTouchService.class)
                     );
-
-                    WindowTouchService.mManager.removeView(WindowTouchService.mView);
 
 
                 } catch (Exception e) {

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Fake</string>
+    <string name="app_name">영어 단어</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="btn1_text">비활성화</string>
     <string name="btn2_text">활성화</string>
     <string name="exit_text">비활성화 되었습니다.</string>
     <string name="start_text">활성화 되었습니다.</string>
-    <string name="info">개발자 정보</string>
+    <string name="info">디자이너 정보</string>
+    <string name="Titleinfo">김환웅</string>
+    <string name="Titltsub">http://behance.net/OnPlay</string>
 
 </resources>

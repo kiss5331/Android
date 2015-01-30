@@ -15,5 +15,23 @@
     <string name="Toolbar_Title2">두근 두근</string>
     <string name="Toolbar_subTitle2">어떤 앱이 선택될까요!</string>
     <string name="colorcheckText">완료 그리고 체크</string>
+    <string name="DeepRed">#f44336</string>
+    <string name="DeepGreen">#4caf50</string>
+    <string name="DeepBlue">#2196f3</string>
+    <string name="DeppBrown">#795548</string>
+    <string name="DeepGray">#9e9e9e</string>
+    <string name="DeepPink">#ec407a</string>
+    <string name="DeepPurple">#673ab7</string>
+    <string name="DeepWhite">#ffffff</string>
 
+    <string-array name="DeepColor">
+        <item>#f44336</item>
+        <item>#4caf50</item>
+        <item>#2196f3</item>
+        <item>#795548</item>
+        <item>#9e9e9e</item>
+        <item>#ec407a</item>
+        <item>#673ab7</item>
+        <item>#FFEB3B</item>
+    </string-array>
 </resources>
