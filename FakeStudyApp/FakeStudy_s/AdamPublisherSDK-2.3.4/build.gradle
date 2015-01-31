@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('AdamPublisherSDK-2.3.4.jar'))

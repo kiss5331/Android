@@ -7,7 +7,7 @@ import android.util.Log;
  */
 public class ColorMixer {
 
-   // 혼합된 색상
+    // 혼합된 색상
     private String RGB_COLOR;
 
     private final String ERROR_CODE = ColorMixer.this.getClass().getName();
@@ -15,7 +15,7 @@ public class ColorMixer {
 
     public ColorMixer(String COLOR_CODE, String COLOR_CODE1) {
 
-        RGB_COLOR = colormixing(COLOR_CODE, COLOR_CODE1);
+        RGB_COLOR = colormixing(COLOR_CODE, COLOR_CODE1).toLowerCase();
 
     }
 
@@ -23,25 +23,29 @@ public class ColorMixer {
 
     private String colormixing(String color1, String color2) {
 
-        final int R = 1;
 
-        final int G = 3;
+        color1 = color1.replace("#", "");
 
-        final int B = 5;
+        color2 = color2.replace("#", "");
+        final int R = 0;
+
+        final int G = 2;
+
+        final int B = 4;
 
         //  합칠 색상들 10진수 변환
 
-        String Red = HaxCodeChanger(color1.substring(R, G));
+        String Red = getHexToDec(color1.substring(R, G));
 
-        String Red2 = HaxCodeChanger(color2.substring(R, G));
+        String Red2 = getHexToDec(color2.substring(R, G));
 
-        String Green = HaxCodeChanger(color1.substring(G, B));
+        String Green = getHexToDec(color1.substring(G, B));
 
-        String Green2 = HaxCodeChanger(color2.substring(G, B));
+        String Green2 = getHexToDec(color2.substring(G, B));
 
-        String Blue = HaxCodeChanger(color1.substring(B, color1.length()));
+        String Blue = getHexToDec(color1.substring(B, color1.length()));
 
-        String Blue2 = HaxCodeChanger(color2.substring(B, color1.length()));
+        String Blue2 = getHexToDec(color2.substring(B, color1.length()));
 
 
         String mixing_R = mixing(Red, Red2);
@@ -58,7 +62,7 @@ public class ColorMixer {
         Log.e("B", mixing_B + "");
 
 
-        String mix_RGB = "#" + getDecToHex(mixing_R) + getDecToHex(mixing_G) + getDecToHex(mixing_B);
+        String mix_RGB = "#" + check_leath(getDecToHex(mixing_R)) + check_leath(getDecToHex(mixing_G)) + check_leath(getDecToHex(mixing_B));
 
         return mix_RGB;
     }
@@ -127,6 +131,10 @@ public class ColorMixer {
         return String.valueOf(DEC_1 + DEC_2);
     }
 
+    private String getHexToDec(String hex) {
+        long v = Long.parseLong(hex, 16);
+        return String.valueOf(v);
+    }
 
     private String mixing(String RGBs, String RGB1s) {
 
@@ -153,12 +161,32 @@ public class ColorMixer {
     private String getDecToHex(String dec) {
 
         Long intDec = Long.parseLong(dec);
-        return Long.toHexString(intDec).toUpperCase();
+        return Long.toHexString(intDec).toLowerCase();
     }
 
     public String getMixColor() {
 
-        return RGB_COLOR;
+        Log.i(ERROR_CODE, RGB_COLOR);
+
+        return RGB_COLOR.toUpperCase();
+
+
+    }
+
+
+    private String check_leath(String color) {
+        if (color.length() != 2) {
+
+            if (color.length() == 0) {
+                color = "00";
+            } else {
+                color = "0" + color;
+            }
+
+        }
+
+
+        return color;
     }
 
 }

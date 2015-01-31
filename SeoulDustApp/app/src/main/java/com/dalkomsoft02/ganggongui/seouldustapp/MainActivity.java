@@ -7,7 +7,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,8 +47,6 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
-        setToolBar();
-
         // 네트워크 연결 여부 검사
         if (checkNetwordState()) {
 
@@ -76,18 +73,6 @@ public class MainActivity extends ActionBarActivity {
 
         }
 
-
-    }
-
-    private void setToolBar() {
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
-
-        toolbar.setTitleTextColor(getResources().getColor(android.R.color.black));
-
-        toolbar.setTitle(getString(R.string.app_name));
-
-        setSupportActionBar(toolbar);
 
     }
 

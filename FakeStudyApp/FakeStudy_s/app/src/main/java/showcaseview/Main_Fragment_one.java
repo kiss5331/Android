@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import net.daum.adam.publisher.AdView;
+
 import ganggongui.dalkomsoft02.com.myapplication.R;
 import ganggongui.dalkomsoft02.com.myapplication.WindowTouchService;
 
@@ -18,6 +20,9 @@ import ganggongui.dalkomsoft02.com.myapplication.WindowTouchService;
  * Created by ganggongui on 15. 1. 21..
  */
 public class Main_Fragment_one extends Fragment implements View.OnClickListener {
+
+    private static final String LOGTAG = "BannerTypeXML1";
+    private AdView adView = null;
 
     private final String EARR_CODE = Main_Fragment_one.class.getName();
 
@@ -35,6 +40,7 @@ public class Main_Fragment_one extends Fragment implements View.OnClickListener 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         this.view = inflater.inflate(R.layout.main_fragment_one, container, false);
+
 
         return this.view;
     }
@@ -123,4 +129,5 @@ public class Main_Fragment_one extends Fragment implements View.OnClickListener 
         }
 
     }
+
 }

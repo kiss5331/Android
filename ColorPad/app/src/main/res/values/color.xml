@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="DeepBlue_500">#2196F3</color>
-    <color name="DeepPink">#EC407A</color>
-    <color name="DeepPink_A200">#FF4081</color>
-    <color name="DeepPink_A100">#FF80AB</color>
-    <color name="DeepRed">#F44336</color>
-    <color name="DeepGrean">#4CAF50</color>
+    <color name="DeepBlue_500">#2196f3</color>
+    <color name="DeepPink">#ec407a</color>
+    <color name="DeepPink_A200">#ff4081</color>
+    <color name="DeepPink_A100">#ff80ab</color>
+    <color name="DeepRed">#f44336</color>
+    <color name="DeepGrean">#4caf50</color>
     <color name="DeepBrown">#795548</color>
-    <color name="DeepBlue">#2196F3</color>
-    <color name="Cyan_200">#80DEEA</color>
-    <color name="DeepPurple">#673AB7</color>
-    <color name="DeepGray">#9E9E9E</color>
-    <color name="DeepWhite">#FFFFFF</color>
-    <color name="PressColor">#B0BEC5</color>
-    <color name="DeepYellow">#FFEB3B</color>
+    <color name="DeepBlue">#2196f3</color>
+    <color name="Cyan_200">#80deeA</color>
+    <color name="DeepPurple">#673ab7</color>
+    <color name="DeepGray">#9e9e9e</color>
+    <color name="DeepWhite">#ffffff</color>
+    <color name="PressColor">#b0bec5</color>
+    <color name="DeepYellow">#ffeb3b</color>
 </resources>

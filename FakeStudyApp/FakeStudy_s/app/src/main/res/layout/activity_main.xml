@@ -43,7 +43,19 @@
         </RelativeLayout>
 
 
+        <!-- 광고를 사용하기 위해서는 반드시 Client ID 를 발급받아 사용해야 한다. -->
+
+
     </FrameLayout>
+
+    <net.daum.adam.publisher.AdView
+        android:id="@+id/adview"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        clientId="DAN-toddstn4vcxk"
+        requestInterval="60" />
 
 
 </RelativeLayout>

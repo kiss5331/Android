@@ -8,12 +8,13 @@ import android.util.Log;
 import android.widget.ViewFlipper;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
+import colormixer.ColorMixer;
 import colorset.Picker_Fragment;
 import colorset.View_Fragment;
 import flibanimation.AnimationFactory;
 
 
-public class Setting_Activity extends ActionBarActivity implements View_Fragment.onChangeBtn, Picker_Fragment.OnForwardColorListener {
+public class Setting_Activity extends ActionBarActivity implements View_Fragment.onChangeBtn, Picker_Fragment.OnForwardColorListener, View_Fragment.onReflishBtn {
 
     // 로딩 다이얼 로그
     private SweetAlertDialog pDialog;
@@ -21,6 +22,9 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
     // 로딩 시간
     private final int REMIT_TIME = 1500;
 
+    private final String View_Fragment_Tag = "tegs";
+
+    private final String Picker_Fragment_Tag = "tagss";
 
     // 색상 코드
     public static String COLOR_CODES[];
@@ -29,7 +33,7 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
 
 
     // 처음 받는 색상 코드 값
-    private int DEF_COLOR_CODE = 0;
+    private String DEF_COLOR_CODE = null;
 
 
     @Override
@@ -83,6 +87,21 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
 
     }
 
+
+    // 색상 초기화
+    // 전환을 위한 인터페이스 내부 메소드 구현
+    @Override
+    public void onReflishBtn() {
+
+        Picker_Fragment pickerFragment = (Picker_Fragment) getSupportFragmentManager().findFragmentByTag(Picker_Fragment_Tag);
+
+        pickerFragment.Initializ_USER_COUNTER();
+
+        DEF_COLOR_CODE = "#000000";
+
+    }
+
+
     // 색상 선택 완료시 AppList_Fragment
     // 전환을 위한 인터페이스 내부 메소드 구현
 
@@ -102,13 +121,36 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
     @Override
     public void getPickColor(int color) {
 
-        View_Fragment.setWaveColor(color);
+        // 유져가 선택한 색상의 할수 있는 색상의 개수를 3개로 제한
+        if (Picker_Fragment.USER_PICK_COUNTER < 3) {
 
-        // Log.i(ERROR_CODE, get);
+            View_Fragment viewFragment = (View_Fragment) getSupportFragmentManager().findFragmentByTag(View_Fragment_Tag);
 
-        View_Fragment viewFragment = (View_Fragment)getSupportFragmentManager().findFragmentByTag("tegs");
+            if (Picker_Fragment.USER_PICK_COUNTER == 0) {
+                DEF_COLOR_CODE = Setting_Activity.COLOR_CODES[color];
+                viewFragment.setWaveColor(color, DEF_COLOR_CODE);
+            } else if (Picker_Fragment.USER_PICK_COUNTER == 1) {
 
-        viewFragment.setToase();
+
+                DEF_COLOR_CODE = new ColorMixer(DEF_COLOR_CODE, Setting_Activity.COLOR_CODES[color]).getMixColor();
+
+                viewFragment.setWaveColor(color, DEF_COLOR_CODE);
+
+            } else if (Picker_Fragment.USER_PICK_COUNTER == 2) {
+
+                DEF_COLOR_CODE = new ColorMixer(DEF_COLOR_CODE.toLowerCase(), Setting_Activity.COLOR_CODES[color].toLowerCase()).getMixColor().toUpperCase();
+
+                viewFragment.setWaveColor(color, DEF_COLOR_CODE);
+
+            }
+
+
+            Log.i(ERROR_CODE, "유저가 선택한 색상의 개수\t" + Picker_Fragment.USER_PICK_COUNTER);
+
+        } else {
+            Log.i(ERROR_CODE, "초과된 이후 색상의 개수\t" + Picker_Fragment.USER_PICK_COUNTER);
+
+        }
 
 
     }

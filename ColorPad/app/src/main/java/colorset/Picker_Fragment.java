@@ -200,7 +200,7 @@ public class Picker_Fragment extends Fragment implements View.OnClickListener {
         // 유져가 선택한 색상횟수 카운터
 
 
-        if (USER_PICK_COUNTER != 2) {
+        if (USER_PICK_COUNTER != 3) {
 
             USER_PICK_COUNTER++;
 
