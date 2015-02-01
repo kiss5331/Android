@@ -1,9 +1,14 @@
 package ganggongui.dalkomsoft02.com.colorpad;
 
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import it.neokree.googlenavigationdrawer.GAccount;
 import it.neokree.googlenavigationdrawer.GAccountListener;
@@ -19,7 +24,7 @@ public class MainActivity extends GoogleNavigationDrawer implements GAccountList
 
         //슬라이딩 메뉴 최상단 설정
         GAccount account = new GAccount(getString(R.string.menu_title),
-                getString(R.string.menu_app), this.getResources().
+                getString(R.string.menu_app) + String.valueOf(counterApp()), this.getResources().
                 getDrawable(R.drawable.menu_icon), this.getResources().
                 getDrawable(R.drawable.menu));
         this.addAccount(account);
@@ -42,6 +47,29 @@ public class MainActivity extends GoogleNavigationDrawer implements GAccountList
 
         this.addDivisor();
 
+
+    }
+
+
+    // 다운 받은 어플의 숫자 카운터
+    private int counterApp() {
+
+        PackageManager packageManager = (PackageManager) getApplicationContext().getPackageManager();
+
+        List<ApplicationInfo> AppList = packageManager.getInstalledApplications(PackageManager.GET_UNINSTALLED_PACKAGES);
+
+        List<ApplicationInfo> DownList = new ArrayList<>();
+
+        for (ApplicationInfo info : AppList) {
+
+            if ((info.flags & ApplicationInfo.FLAG_SYSTEM) == 0) {
+
+                DownList.add(info);
+
+            }
+        }
+
+        return DownList.size() + 1;
 
     }
 

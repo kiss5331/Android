@@ -57,11 +57,18 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
 
     public void ViewChange() {
 
-        final ViewFlipper viewFlipper = (ViewFlipper) findViewById(R.id.view_flipper);
+        if (DEF_COLOR_CODE == null) {
+            new SweetAlertDialog(this)
+                    .setTitleText(getString(R.string.colors))
+                    .show();
+        } else {
+
+            final ViewFlipper viewFlipper = (ViewFlipper) findViewById(R.id.view_flipper);
 
 
-        AnimationFactory.flipTransition(viewFlipper, AnimationFactory.FlipDirection.RIGHT_LEFT);
+            AnimationFactory.flipTransition(viewFlipper, AnimationFactory.FlipDirection.RIGHT_LEFT);
 
+        }
     }
 
 
@@ -97,7 +104,7 @@ public class Setting_Activity extends ActionBarActivity implements View_Fragment
 
         pickerFragment.Initializ_USER_COUNTER();
 
-        DEF_COLOR_CODE = "#000000";
+        DEF_COLOR_CODE = null;
 
     }
 

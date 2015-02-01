@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-<!--
+
         <com.john.waveview.WaveView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -35,7 +35,7 @@
             wave:wave_height="middle"
             wave:wave_hz="normal"
             wave:wave_length="middle"
-            ></com.john.waveview.WaveView>-->
+            ></com.john.waveview.WaveView>
 
 
     </LinearLayout>

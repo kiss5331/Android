@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/Cyan_200"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_weight="5"
+
+                android:id="@+id/media_card_view"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                card_view:cardElevation="5dp"
+                android:layout_marginBottom="0dp">
+
+
+                <ViewFlipper
+                    android:background="@color/Cyan_200"
+                    android:clipToPadding="true"
+                    android:id="@+id/view_flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <fragment
+                        android:tag="tegs"
+                        android:name="colorset.View_Fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_pview" />
+
+                    <fragment
+                        android:id="@+id/fragment_pviewe"
+                        android:name="colorset.AppList_Fragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_plist" />
+
+
+                </ViewFlipper>
+
+            </android.support.v7.widget.CardView>
+
+
+            <fragment
+                android:tag="tagss"
+                android:name="colorset.Picker_Fragment"
+                android:id="@+id/color_picker"
+                android:layout_weight="5"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                tools:layout="@layout/fragment_picker" />
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

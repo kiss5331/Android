@@ -23,6 +23,7 @@
     <string name="DeepPink">#ec407a</string>
     <string name="DeepPurple">#673ab7</string>
     <string name="DeepWhite">#ffffff</string>
+    <string name="colors">이런.. 색상을 선택해주세요!</string>
 
     <string-array name="DeepColor">
         <item>#f44336</item>
